@@ -9,23 +9,23 @@ const slidesData = [
     headline: 'Deccan Eye',
     subheadline: 'The Future of Intelligent Surveillance',
     footer: 'Advanced AI Computer Vision & Smart Automation Solutions.\nPowered by VS Computers.',
-    bgImage: '/logo.png' // Using logo as BG placeholder/fallback if needed, but title slide has custom CSS
+    bgImage: import.meta.env.BASE_URL + 'logo.png' // Using logo as BG placeholder/fallback if needed, but title slide has custom CSS
   },
   {
     id: 2,
     type: 'founders',
     title: 'Meet the Founders',
     founders: [
-      { name: 'Tokapuram Uttam Kumar', image: '/uttam.png', education: 'NIT Graduate (Computer Science)', role: 'Chief Architect & Visionary' },
-      { name: 'Tokapuram Sai Bharath', image: '/saibharath.png', education: 'M.Tech VLSI Design (CMR)', role: 'Hardware Lead (VLSI/Systems)' },
-      { name: 'Shiva Sai Neeli', image: '/shiva sai.png', education: 'NIT Graduate (Electrical Engineering)', role: 'Software Dev (AI/Backend)' }
+      { name: 'Tokapuram Uttam Kumar', image: import.meta.env.BASE_URL + 'uttam.png', education: 'NIT Graduate (Computer Science)', role: 'Chief Architect & Visionary' },
+      { name: 'Tokapuram Sai Bharath', image: import.meta.env.BASE_URL + 'saibharath.png', education: 'M.Tech VLSI Design (CMR)', role: 'Hardware Lead (VLSI/Systems)' },
+      { name: 'Shiva Sai Neeli', image: import.meta.env.BASE_URL + 'shiva sai.png', education: 'NIT Graduate (Electrical Engineering)', role: 'Software Dev (AI/Backend)' }
     ]
   },
   {
     id: 3,
     type: 'split',
     title: 'Why Standard CCTV is Not Enough',
-    image: '/normal cctv.png',
+    image: import.meta.env.BASE_URL + 'normal cctv.png',
     points: [
       { text: 'Passive Recording: Traditional cameras only record; they cannot "see" threats or take action automatically.', level: 0 },
       { text: 'Manual Monitoring: Requires dedicated security personnel watching screens 24/7, leading to fatigue and missed incidents.', level: 0 },
@@ -36,7 +36,7 @@ const slidesData = [
     id: 4,
     type: 'split',
     title: 'Smart Optimization: How We Save Bandwidth',
-    image: '/4th slide.jpg',
+    image: import.meta.env.BASE_URL + '4th slide.jpg',
     points: [
       { text: '3-Stream Technology: Leveraging multi-stream capability of modern IP Cameras for optimal performance.', level: 0 },
       { text: 'Stream 1 (High Quality): Crystal clear 4K evidence recording for court-admissible footage.', level: 1 },
@@ -48,7 +48,7 @@ const slidesData = [
     id: 5,
     type: 'split',
     title: 'Automated Traffic & Safety Detection',
-    images: ['/triple-riding.png', '/without helmet.png'],
+    images: [import.meta.env.BASE_URL + 'triple-riding.png', import.meta.env.BASE_URL + 'without helmet.png'],
     points: [
       { text: 'Helmet Detection: Instantly identifies riders without helmets.', level: 0 },
       { text: 'Triple Riding: Detects more than two passengers.', level: 0 },
@@ -70,7 +70,7 @@ const slidesData = [
     id: 7,
     type: 'split',
     title: 'Seamless Access Control',
-    image: '/automatic_car_opening.png',
+    image: import.meta.env.BASE_URL + 'automatic_car_opening.png',
     points: [
       { text: 'Auto-Gate Opening: Gate opens automatically when your registered vehicle approaches - no remote needed.', level: 0 },
       { text: 'Smart Home Integration: Control lights, fans, and appliances directly from your mobile phone.', level: 0 },
@@ -81,7 +81,7 @@ const slidesData = [
     id: 8,
     type: 'split',
     title: 'Face Recognition & Semantic Search',
-    image: '/face rec.jpeg',
+    image: import.meta.env.BASE_URL + 'face rec.jpeg',
     points: [
       { text: 'Inbuilt Face Recognition: Identifies personnel or blacklisted individuals.', level: 0 },
       { text: 'Semantic Search: Search video with natural language.', level: 0 },
@@ -93,7 +93,7 @@ const slidesData = [
     id: 9,
     type: 'split',
     title: 'Bank-Grade Data Security',
-    image: '/secured.png',
+    image: import.meta.env.BASE_URL + 'secured.png',
     points: [
       { text: 'Built on Ubuntu: Enterprise-grade Linux OS providing maximum stability and security for 24/7 operation.', level: 0 },
       { text: 'Tailscale VPN: Military-grade encrypted remote access without risky port forwarding or complex firewall rules.', level: 0 },
@@ -104,7 +104,7 @@ const slidesData = [
     id: 10,
     type: 'split',
     title: 'Connecting the Unconnected',
-    image: '/P2p.png',
+    image: import.meta.env.BASE_URL + 'P2p.png',
     containImage: true,
     points: [
       { text: 'Wireless Command Control: Mandal-level monitoring centers connected via advanced P2P technology.', level: 0 },
@@ -116,7 +116,7 @@ const slidesData = [
     id: 11,
     type: 'split',
     title: 'Powering Remote Locations',
-    image: '/solar cam.jpg',
+    image: import.meta.env.BASE_URL + 'solar cam.jpg',
     containImage: true,
     points: [
       { text: 'Solar + 4G Cameras: Self-powered surveillance solution for locations without electricity grid access.', level: 0 },
@@ -141,7 +141,7 @@ function TitleSlide({ data }) {
     <div className="slide title-slide">
       <div className="accent-circle"></div>
       <div className="content">
-        <img src="/logo.png" alt="Deccan Eye Logo" className="logo" />
+        <img src={import.meta.env.BASE_URL + "logo.png"} alt="Deccan Eye Logo" className="logo" />
         <h1>{data.headline}</h1>
         <h2>{data.subheadline}</h2>
         <p>{data.footer}</p>
@@ -155,7 +155,7 @@ function FoundersSlide({ data }) {
     <div className="slide">
       <div className="slide-header">
         <h2>{data.title}</h2>
-        <img src="/logo.png" alt="Logo" className="logo" />
+        <img src={import.meta.env.BASE_URL + "logo.png"} alt="Logo" className="logo" />
       </div>
       <div className="slide-content">
         <div className="founders-grid">
@@ -183,7 +183,7 @@ function SplitSlide({ data }) {
     <div className="slide split-slide-container">
       <div className="slide-header">
         <h2>{data.title}</h2>
-        <img src="/logo.png" alt="Logo" className="logo" />
+        <img src={import.meta.env.BASE_URL + "logo.png"} alt="Logo" className="logo" />
       </div>
       <div className="split-content">
         <div className="text-panel glass-panel">
@@ -215,7 +215,7 @@ function WorkflowSlide({ data }) {
     <div className="slide">
       <div className="slide-header">
         <h2>{data.title}</h2>
-        <img src="/logo.png" alt="Logo" className="logo" />
+        <img src={import.meta.env.BASE_URL + "logo.png"} alt="Logo" className="logo" />
       </div>
       <div className="slide-content">
         <div className="workflow-steps">
@@ -240,7 +240,7 @@ function ContactSlide({ data }) {
     <div className="slide">
       <div className="slide-header">
         <h2>{data.title}</h2>
-        <img src="/logo.png" alt="Logo" className="logo" />
+        <img src={import.meta.env.BASE_URL + "logo.png"} alt="Logo" className="logo" />
       </div>
       <div className="slide-content">
         <div className="contact-card glass-panel">
@@ -304,6 +304,48 @@ function App() {
     return () => {
       window.removeEventListener('keydown', handleKeyDown)
       document.removeEventListener('fullscreenchange', handleFullscreenChange)
+    }
+  }, [currentSlide])
+
+  // Touch swipe support for mobile
+  useEffect(() => {
+    let touchStartX = 0
+    let touchEndX = 0
+
+    const handleTouchStart = (e) => {
+      touchStartX = e.changedTouches[0].screenX
+    }
+
+    const handleTouchEnd = (e) => {
+      touchEndX = e.changedTouches[0].screenX
+      handleSwipe()
+    }
+
+    const handleSwipe = () => {
+      const swipeThreshold = 50
+      const diff = touchStartX - touchEndX
+
+      if (Math.abs(diff) > swipeThreshold) {
+        if (diff > 0) {
+          // Swiped left - go to next slide
+          if (currentSlide < slidesData.length - 1) {
+            setCurrentSlide(currentSlide + 1)
+          }
+        } else {
+          // Swiped right - go to previous slide
+          if (currentSlide > 0) {
+            setCurrentSlide(currentSlide - 1)
+          }
+        }
+      }
+    }
+
+    document.addEventListener('touchstart', handleTouchStart, { passive: true })
+    document.addEventListener('touchend', handleTouchEnd, { passive: true })
+
+    return () => {
+      document.removeEventListener('touchstart', handleTouchStart)
+      document.removeEventListener('touchend', handleTouchEnd)
     }
   }, [currentSlide])
 

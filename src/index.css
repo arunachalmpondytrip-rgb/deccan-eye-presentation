@@ -660,3 +660,485 @@ body {
 .active .slide-header .logo {
   animation: slideUpFade 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
 }
+
+/* ============================================
+   MOBILE RESPONSIVE STYLES
+   ============================================ */
+
+/* Tablet Landscape & Small Desktops */
+@media screen and (max-width: 1200px) {
+  .slide {
+    padding: 40px 50px;
+  }
+
+  .slide-header h2 {
+    font-size: 36px;
+  }
+
+  .title-slide h1 {
+    font-size: 60px;
+  }
+
+  .title-slide h2 {
+    font-size: 28px;
+  }
+
+  .bullet-list li {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+
+  .founders-grid {
+    gap: 20px;
+  }
+
+  .founder-card {
+    padding: 20px 15px;
+  }
+
+  .founder-card .avatar {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* Tablets */
+@media screen and (max-width: 992px) {
+  body {
+    overflow: auto;
+    align-items: flex-start;
+    padding: 20px 10px 100px;
+  }
+
+  .presentation {
+    width: 95vw;
+    aspect-ratio: unset;
+    min-height: 80vh;
+    border-radius: 16px;
+  }
+
+  .slide {
+    padding: 30px 25px;
+    min-height: 100%;
+  }
+
+  .slide-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 25px;
+  }
+
+  .slide-header h2 {
+    font-size: 28px;
+    order: 2;
+  }
+
+  .slide-header .logo {
+    order: 1;
+    height: 40px;
+  }
+
+  /* Split slides - stack vertically on tablets */
+  .slide.split-slide-container .split-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .split-content .text-panel {
+    padding: 15px 20px;
+    order: 2;
+  }
+
+  .split-content .image-panel {
+    order: 1;
+    min-height: 200px;
+    max-height: 250px;
+  }
+
+  .split-content .image-panel.multi-image {
+    flex-direction: row;
+    min-height: 180px;
+    max-height: 200px;
+  }
+
+  /* Founders Grid - 2 columns on tablet */
+  .founders-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .founder-card .avatar {
+    width: 80px;
+    height: 80px;
+  }
+
+  .founder-card h3 {
+    font-size: 16px;
+  }
+
+  .founder-card .education,
+  .founder-card .role {
+    font-size: 12px;
+  }
+
+  /* Workflow - 2x2 grid */
+  .workflow-steps {
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+  }
+
+  .workflow-wrapper {
+    max-width: 45%;
+    flex-basis: 45%;
+  }
+
+  .workflow-arrow {
+    display: none;
+  }
+
+  .workflow-step {
+    padding: 25px 15px;
+  }
+
+  .step-number {
+    font-size: 14px;
+  }
+
+  .step-text {
+    font-size: 14px;
+  }
+
+  /* Title slide */
+  .title-slide h1 {
+    font-size: 48px;
+  }
+
+  .title-slide h2 {
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+
+  .title-slide .logo {
+    height: 80px;
+    margin-bottom: 25px;
+  }
+
+  .title-slide p {
+    font-size: 14px;
+  }
+
+  /* Contact card */
+  .contact-card {
+    padding: 30px 20px;
+    margin: 20px auto;
+  }
+
+  .contact-card h3 {
+    font-size: 24px;
+    margin-bottom: 25px;
+  }
+
+  /* Nav controls */
+  .nav-controls {
+    bottom: 15px;
+    padding: 8px 15px;
+    gap: 12px;
+  }
+
+  .nav-controls button {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .slide-counter {
+    font-size: 14px;
+    min-width: 50px;
+  }
+}
+
+/* Mobile Phones */
+@media screen and (max-width: 576px) {
+  body {
+    padding: 10px 5px 90px;
+  }
+
+  .presentation {
+    width: 100vw;
+    border-radius: 12px;
+    box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.5);
+  }
+
+  .slide {
+    padding: 20px 15px;
+  }
+
+  .slide-header {
+    margin-bottom: 20px;
+    gap: 10px;
+  }
+
+  .slide-header h2 {
+    font-size: 22px;
+  }
+
+  .slide-header h2::after {
+    width: 40px;
+    height: 3px;
+    bottom: -6px;
+  }
+
+  .slide-header .logo {
+    height: 35px;
+  }
+
+  /* Title Slide Mobile */
+  .slide.title-slide {
+    padding: 30px 20px;
+  }
+
+  .title-slide .logo {
+    height: 60px;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    border-radius: 10px;
+  }
+
+  .title-slide h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+  }
+
+  .title-slide h2 {
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
+
+  .title-slide p {
+    font-size: 12px;
+    padding-left: 12px;
+    border-left-width: 3px;
+  }
+
+  /* Split slide mobile */
+  .split-content .image-panel {
+    min-height: 150px;
+    max-height: 180px;
+  }
+
+  .split-content .image-panel.multi-image {
+    min-height: 140px;
+    max-height: 160px;
+  }
+
+  .split-content .text-panel {
+    padding: 10px 12px;
+  }
+
+  .bullet-list li {
+    font-size: 14px;
+    margin-bottom: 12px;
+    padding-left: 25px;
+    line-height: 1.4;
+  }
+
+  .bullet-list li::before {
+    font-size: 14px;
+  }
+
+  .bullet-list li.sub-item {
+    font-size: 13px;
+    margin-left: 12px;
+  }
+
+  /* Founders - single column on mobile */
+  .founders-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 10px 0;
+  }
+
+  .founder-card {
+    padding: 15px;
+    flex-direction: row;
+    gap: 15px;
+    text-align: left;
+  }
+
+  .founder-card .avatar {
+    width: 60px;
+    height: 60px;
+    margin: 0;
+    flex-shrink: 0;
+  }
+
+  .founder-card h3 {
+    font-size: 15px;
+    margin-bottom: 4px;
+  }
+
+  .founder-card .education {
+    font-size: 11px;
+    margin-bottom: 4px;
+  }
+
+  .founder-card .role {
+    font-size: 11px;
+  }
+
+  /* Workflow - single column on mobile */
+  .workflow-steps {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .workflow-wrapper {
+    max-width: 100%;
+    flex-basis: 100%;
+    width: 100%;
+  }
+
+  .workflow-step {
+    padding: 20px 15px;
+    width: 100%;
+  }
+
+  .step-number {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+
+  .step-text {
+    font-size: 13px;
+  }
+
+  /* Contact card mobile */
+  .contact-card {
+    padding: 25px 15px;
+    margin: 15px 10px;
+  }
+
+  .contact-card h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .contact-card p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    word-break: break-word;
+  }
+
+  .contact-card .closing {
+    font-size: 13px;
+    margin-top: 15px;
+  }
+
+  /* Navigation controls mobile */
+  .nav-controls {
+    bottom: 10px;
+    padding: 6px 12px;
+    gap: 10px;
+    border-radius: 30px;
+  }
+
+  .nav-controls button {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+
+  .slide-counter {
+    font-size: 12px;
+    min-width: 45px;
+  }
+
+  .fullscreen-btn {
+    margin-left: 5px;
+  }
+}
+
+/* Extra small phones */
+@media screen and (max-width: 380px) {
+  .slide {
+    padding: 15px 12px;
+  }
+
+  .slide-header h2 {
+    font-size: 18px;
+  }
+
+  .title-slide h1 {
+    font-size: 26px;
+  }
+
+  .title-slide h2 {
+    font-size: 14px;
+  }
+
+  .bullet-list li {
+    font-size: 13px;
+  }
+
+  .founder-card .avatar {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* Touch-friendly improvements */
+@media (hover: none) and (pointer: coarse) {
+  .nav-controls button {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .founder-card:hover {
+    transform: none;
+  }
+}
+
+/* Landscape mode on mobile phones */
+@media screen and (max-width: 850px) and (orientation: landscape) {
+  body {
+    padding: 10px 10px 80px;
+  }
+
+  .presentation {
+    min-height: 90vh;
+  }
+
+  .slide.split-slide-container .split-content {
+    flex-direction: row;
+  }
+
+  .split-content .image-panel {
+    max-height: none;
+  }
+
+  .founders-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .founder-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .founder-card .avatar {
+    margin: 0 auto 10px;
+  }
+
+  .workflow-steps {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  .workflow-wrapper {
+    max-width: none;
+    flex: 1;
+  }
+}
