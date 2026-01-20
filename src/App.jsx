@@ -16,9 +16,9 @@ const slidesData = [
     type: 'founders',
     title: 'Meet the Founders',
     founders: [
-      { name: 'Tokapuram Uttam Kumar', image: import.meta.env.BASE_URL + 'uttam.png', education: 'NIT Graduate (Computer Science)', role: 'Chief Architect & Visionary' },
-      { name: 'Tokapuram Sai Bharath', image: import.meta.env.BASE_URL + 'saibharath.png', education: 'M.Tech VLSI Design (CMR)', role: 'Hardware Lead (VLSI/Systems)' },
-      { name: 'Shiva Sai Neeli', image: import.meta.env.BASE_URL + 'shiva sai.png', education: 'NIT Graduate (Electrical Engineering)', role: 'Software Dev (AI/Backend)' }
+      { name: 'Tokapuram Uttam Kumar', image: import.meta.env.BASE_URL + 'uttam.png', education: 'NIT Graduate (Computer Science)', role: 'Chief Architect & Visionary', experience: 'Experience: Data Scientist at Reliance Life Sciences' },
+      { name: 'Tokapuram Sai Bharath', image: import.meta.env.BASE_URL + 'saibharath.png', education: 'M.Tech VLSI Design (CMR)', role: 'Hardware Lead (VLSI/Systems)', experience: 'Experience: Lecturer, Electrical Technician Department' },
+      { name: 'Shiva Sai Neeli', image: import.meta.env.BASE_URL + 'shiva sai.png', education: 'NIT Graduate (Electrical Engineering)', role: 'Software Dev (AI/Backend)', experience: 'Experience: Software Developer at Oracle' }
     ]
   },
   {
@@ -166,6 +166,7 @@ function FoundersSlide({ data }) {
               </div>
               <h3>{founder.name}</h3>
               <p className="education">{founder.education}</p>
+              <p className="experience">{founder.experience}</p>
               <p className="role">{founder.role}</p>
             </div>
           ))}
